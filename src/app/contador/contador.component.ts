@@ -15,8 +15,15 @@ export class ContadorComponent {
 
   }
 
-  //tipado flexible
-  nombre:String = "A15";
-  nombre2 = "Angular 15";
+  /*
+  tipado flexible
+  */
+  nombre:string = "REGPRO";
+  nombre2 = "REGPROAngular 15";
+
+  usuario = {
+    codoid : "40758607",
+    password: "123456789"
+  };
 
 }
