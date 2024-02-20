@@ -4,6 +4,13 @@
 <!-- La interpolación no funciona dentro de otro componente por eso no puedo usar title de esta forma-->
 
 <!-- De esta manera se puede acceder a las propiedades de los objetos -->
-<p>El codigo de documento es: {{ usuario.codoid }}</p>
+<p>El codigo de documento es: {{ usuario.edad }}</p>
 
-<!--  -->
+<!-- los botones estan atentos al click -->
+<button (click)="decrement()">
+    -
+</button>
+<span> {{ numero }} </span>
+<button (click)="increment()">
+    +
+</button>
