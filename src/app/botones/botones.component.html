@@ -1,7 +1,52 @@
+<!-- <div>
+    <button [ngClass]="{
+        'disabled':button_disabled
+    }" class="btn btn-danger mx-2" (click)="text_color = 'text-danger'">rojo</button>
+    <button [class]="{
+        'disabled':button_disabled
+    }" class="btn btn-success mx-2" (click)="text_color = 'text-success'">verde</button>
+    <button [class]="{
+        'disabled':button_disabled
+    }" class="btn btn-primary mx-2" (click)="text_color = 'text-primary'">azul</button>
+</div> -->
+
 <div>
-    <button class="btn btn-danger mx-2">rojo</button>
-    <button class="btn btn-success mx-2">verde</button>
-    <button class="btn btn-primary mx-2">azul</button>
+  <!-- <button [class.disabled]="button_disabled" class="btn btn-danger mx-2" (click)="text_color = 'text-danger'">rojo</button> -->
+  <button
+    [disabled]="button_disabled"
+    class="btn btn-danger mx-2"
+    (click)="text_color = 'text-danger'">
+    rojo
+  </button>
+  <button
+    [disabled]="button_disabled"
+    class="btn btn-success mx-2"
+    (click)="text_color = 'text-success'">
+    verde
+  </button>
+  <button
+    [disabled]="button_disabled"
+    class="btn btn-primary mx-2"
+    (click)="text_color = 'text-primary'">
+    azul
+  </button>
 </div>
 
-<p>Texto que cambia color</p>
+<p [class]="text_color">Texto que cambia color</p>
+
+<p>{{ text_color }}</p>
+
+<button class="btn btn-secondary" (click)="button_disabled = !button_disabled">
+  Activar / Desactivar
+</button>
+<br />
+<img [src]="src" alt="" />
+<br />
+<div>
+  <button class="btn btn-primary" (click)="src='https://images.pexels.com/photos/7307944/pexels-photo-7307944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+    Imagen 1
+</button>
+  <button class="btn btn-danger" (click)="src='https://images.pexels.com/photos/5905857/pexels-photo-5905857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+    Imagen 2
+</button>
+</div>
