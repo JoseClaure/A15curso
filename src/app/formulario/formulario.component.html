@@ -1,1 +1,20 @@
-<p>formulario works!</p>
+
+<div>
+    <input type="text" placeholder="Ingresa tu nombre" class="form-control" #name>
+    <button class="btn btn-primary mt-2" (click)="mostrarenconsola(name.value)">
+        Mostrar en consola
+    </button>
+</div>
+
+<div class="alert alert-primary mt-4" *ngIf = "openAlert; else mensaje">
+    <p>Se ha enviado el mensaje</p>
+    <button class="btn-danger" (click)="openAlert = false"> 
+        x 
+    </button>
+</div>
+
+<ng-template #mensaje>
+    <div class="alert alert-danger">
+        Mensaje de prueba
+    </div>
+</ng-template>
