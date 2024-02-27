@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SwitchComponent {
 
+  dia?:string; 
+  //el simbolo de interrogacion me evita tener que definir un valor por defecto
+
+
 }
