@@ -7,6 +7,11 @@ import { BotonesComponent } from './botones/botones.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
+import { Form2Component } from './form2/form2.component';
+//agregados
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Form3Component } from './form3/form3.component';
+import { ChildrenComponent } from './children/children.component';
 
 @NgModule({
   declarations: [
@@ -15,19 +20,22 @@ import { SwitchComponent } from './switch/switch.component';
     BotonesComponent,
     FormularioComponent,
     BuclesComponent,
-    SwitchComponent
+    SwitchComponent,
+    Form2Component,
+    Form3Component,
+    ChildrenComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule implements OnInit {
 
-  constructor() {
-    
-  }
+  constructor() {}
 
   ngOnInit(): void {
 

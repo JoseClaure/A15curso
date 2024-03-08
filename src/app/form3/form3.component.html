@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="formUser" (ngSubmit)="procesar()">
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre
+                </label>
+                <input type="text" formControlName="name" class="form-control" placeholder="Ingrese su nombre">
+            </div>
+            <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                El nombre es obligatorio
+            </div>
+    
+            <div class="mb-2">
+                <label class="form-label">
+                    Email
+                </label>
+                <input type="text" formControlName="email" class="form-control" placeholder="Ingrese su correo">
+            </div>
+            <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+                <span *ngIf="email.errors?.['required']">
+                    El email es obligatorio
+                </span>
+                <span *ngIf="email.errors?.['email']">
+                    El email debe ser valido
+                </span>
+            </div>
+            <!-- <button class="btn btn-primary" [disabled]="name.invalid || email.invalid"> -->
+            <button class="btn btn-primary" [disabled]="formUser.invalid">
+                Enviar
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- {{ formUser.get('name')?.value }} -->
+
+<!-- {{ email.errors | json}} -->
+<!-- 
+    {{ name.value }}
+    <br>
+    {{ email.value }} 
+-->
